@@ -851,11 +851,11 @@ p.nominalBounds = new cjs.Rectangle(0,0,331.1,311);
 
 	// Layer_1
 	this.text = new cjs.Text("שחקו שוב", "15px 'Arial'");
-	this.text.textAlign = "right";
+	this.text.textAlign = "center";
 	this.text.lineHeight = 19;
-	this.text.lineWidth = 65;
+	this.text.lineWidth = 94;
 	this.text.parent = this;
-	this.text.setTransform(29.9,-8.3);
+	this.text.setTransform(0,-8.7);
 
 	this.instance = new lib.Bitmap3();
 	this.instance.parent = this;
@@ -883,12 +883,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,331.1,311);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.text = new cjs.Text("סיום", "18px 'Arial'");
-	this.text.textAlign = "right";
-	this.text.lineHeight = 22;
-	this.text.lineWidth = 38;
+	this.text = new cjs.Text("סיום", "15px 'Arial'");
+	this.text.textAlign = "center";
+	this.text.lineHeight = 19;
+	this.text.lineWidth = 91;
 	this.text.parent = this;
-	this.text.setTransform(15.6,-11.8);
+	this.text.setTransform(0,-8.5);
 
 	this.instance = new lib.Bitmap3();
 	this.instance.parent = this;
@@ -2862,10 +2862,10 @@ lib.properties = {
 	color: "#E9E5CA",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HIT_the_DUCK_atlas_.png?1549916826200", id:"HIT_the_DUCK_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549916826360", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1549916826360", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/combobox.js?1549916826360", id:"an.ComboBox"}
+		{src:"images/HIT_the_DUCK_atlas_.png?1549926954684", id:"HIT_the_DUCK_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549926954818", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1549926954818", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/combobox.js?1549926954818", id:"an.ComboBox"}
 	],
 	preloads: []
 };
