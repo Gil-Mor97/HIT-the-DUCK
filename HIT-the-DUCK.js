@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"HIT_the_DUCK_atlas_", frames: [[1600,0,1314,1164],[3468,1801,440,123],[2445,1643,400,233],[1241,1849,400,267],[1241,1567,400,280],[2903,1514,400,266],[3687,577,100,81],[2916,577,769,501],[3305,1514,226,160],[1843,1565,600,360],[1843,1166,600,397],[1241,1166,600,399],[2916,1080,650,432],[1643,1927,342,100],[2847,1801,619,123],[2445,1878,342,100],[3305,1676,666,123],[2789,1926,376,60],[2445,1166,456,475],[3533,1514,150,107],[2847,1643,39,91],[3687,838,268,836],[3801,0,268,836],[2916,0,883,575],[2789,1878,32,32],[0,0,1598,1164],[0,1166,1239,1164],[1987,1927,359,78]]}
+		{name:"HIT_the_DUCK_atlas_", frames: [[1600,0,1314,1164],[3468,1801,440,123],[2445,1643,400,233],[1241,1849,400,267],[1241,1567,400,280],[2903,1514,400,266],[3687,577,100,81],[2916,577,769,501],[3305,1514,226,160],[1843,1565,600,360],[1843,1166,600,397],[1241,1166,600,399],[2916,1080,650,432],[1643,1927,342,100],[2847,1801,619,123],[2445,1878,342,100],[3305,1676,666,123],[2789,1926,376,60],[2445,1166,456,475],[3533,1514,150,107],[2847,1643,39,91],[3801,0,268,836],[3687,838,268,836],[2916,0,883,575],[2789,1878,32,32],[0,0,1598,1164],[0,1166,1239,1164],[1987,1927,359,78]]}
 ];
 
 
@@ -2381,9 +2381,9 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		//טעינת סאונדים
 		function sounds() {
 			//לטעון את הסאונד - נתיב + שם
-			createjs.Sound.registerSound("/sounds/hitSound.wav", "hitSound");
-			createjs.Sound.registerSound("/sounds/winSound.wav", "winSound");
-			createjs.Sound.registerSound("/sounds/loseSound.wav", "loseSound");
+			createjs.Sound.registerSound("../sounds/hitSound.wav", "hitSound");
+			createjs.Sound.registerSound("../sounds/winSound.wav", "winSound");
+			createjs.Sound.registerSound("../sounds/loseSound.wav", "loseSound");
 		}
 		
 		
@@ -2862,10 +2862,10 @@ lib.properties = {
 	color: "#E9E5CA",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HIT_the_DUCK_atlas_.png?1549927819435", id:"HIT_the_DUCK_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549927819555", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1549927819555", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/combobox.js?1549927819555", id:"an.ComboBox"}
+		{src:"images/HIT_the_DUCK_atlas_.png?1549957834546", id:"HIT_the_DUCK_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549957834640", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1549957834640", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/combobox.js?1549957834640", id:"an.ComboBox"}
 	],
 	preloads: []
 };
