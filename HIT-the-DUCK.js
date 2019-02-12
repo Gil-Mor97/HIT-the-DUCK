@@ -2381,9 +2381,9 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		//טעינת סאונדים
 		function sounds() {
 			//לטעון את הסאונד - נתיב + שם
-			createjs.Sound.registerSound("../sounds/hitSound.wav", "hitSound");
-			createjs.Sound.registerSound("../sounds/winSound.wav", "winSound");
-			createjs.Sound.registerSound("../sounds/loseSound.wav", "loseSound");
+			createjs.Sound.registerSound("/HIT-the-DUCK/sounds/hitSound.wav", "hitSound");
+			createjs.Sound.registerSound("/HIT-the-DUCK/sounds/winSound.wav", "winSound");
+			createjs.Sound.registerSound("/HIT-the-DUCK/sounds/loseSound.wav", "loseSound");
 		}
 		
 		
