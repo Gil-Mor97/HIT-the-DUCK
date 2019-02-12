@@ -2045,11 +2045,11 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 	// Layer_1
 	this.instance = new lib.ClipGroup_11();
 	this.instance.parent = this;
-	this.instance.setTransform(253.5,58.1,2.996,1.587,0,0,0,102.4,42);
+	this.instance.setTransform(-1.2,58.1,2.996,1.587,0,0,0,102.4,42);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.sign, new cjs.Rectangle(-53.3,-8.6,613.3,133.1), null);
+}).prototype = getMCSymbolPrototype(lib.sign, new cjs.Rectangle(-308,-8.6,613.3,133.1), null);
 
 
 (lib.pauseBtn = function(mode,startPosition,loop) {
@@ -2072,22 +2072,22 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 	this.wave1 = new lib.wave();
 	this.wave1.name = "wave1";
 	this.wave1.parent = this;
-	this.wave1.setTransform(480,541.6,1.605,1.604,0,0,0,299.1,29.6);
+	this.wave1.setTransform(480,540.6,1.605,1.604,0,0,0,299.1,29.6);
 	this.wave1.visible = false;
 
 	this.instance = new lib.cross();
 	this.instance.parent = this;
-	this.instance.setTransform(671.7,409.1,2.079,2.079,0,0,0,73.5,73.5);
+	this.instance.setTransform(671.7,408.1,2.079,2.079,0,0,0,73.5,73.5);
 	this.instance.visible = false;
 
 	this.instance_1 = new lib.gamespd();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(100,50.6,1,1,0,0,0,100,50.6);
+	this.instance_1.setTransform(100,49.6,1,1,0,0,0,100,50.6);
 	this.instance_1.visible = false;
 
 	this.instance_2 = new lib.sign();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(521.5,94.2,0.796,0.796,0,0,0,240.5,102.5);
+	this.instance_2.setTransform(521.5,93.2,0.796,0.796,0,0,0,240.5,102.5);
 	this.instance_2.visible = false;
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance},{t:this.wave1}]}).wait(1));
@@ -2186,6 +2186,8 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		var self = this;
 		
 		
+		
+		
 		//שימו לב, מערך זה משמש רק להצגת הנושאים בתוך תיבת הטקסט
 		//את הערכים שמוצגים בקומבו עצמו, יש להגדיר בתוך הקומפוננטה - לחיצה כפולה עליה בלייבררי, המקרה שלנו:
 		//forcomb -> click on the combobox componenet -> component parameters
@@ -2194,8 +2196,8 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		var mychoice = 0;
 		
 		//מימדי הבמה
-		var stageWidth = parseInt(canvas.style.width);
-		var stageHeight = parseInt(canvas.style.height);
+		var stageWidth = 960;
+		var stageHeight = 590;
 		var isStarted = false;
 		
 		var introArray = [
@@ -2239,7 +2241,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		
 			//הוספת הקומבו לבמה
 			var forcombo = new lib.forcomb();
-			forcombo.x = stageWidth / 2 - 148.65;
+			forcombo.x = stageWidth / 2 - 55;
 			forcombo.y = 150;
 			forcombo.name = "forcombo";
 			stage.addChild(forcombo);
@@ -2259,7 +2261,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		
 			fl_TF.text = ""; //ניקוי הבחירה הקודמת
 			//שימרת הערך שנבחר בקומבו
-			console.log(evt.currentTarget.value);
+		/*	console.log(evt.currentTarget.value);*/
 			mychoice = evt.currentTarget.value;
 			//אם נבחר הערך הראשון - "בחר נושא
 			if (mychoice == 0) {
@@ -2313,10 +2315,18 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		createjs.Ticker.paused = true;
 		
 		
+		function handlekeypress(e){
+				if(e.keyCode == "32" && directionX == 1){
+					pauseGame();
+				}
+				else if(e.keyCode == "32" && directionX == 0){
+						continueGame();
+				}
+		}
 		
 		//מערך לאובייקטים על הבמה
 		var objArray = [
-			[lib.sign, stageWidth / 2 - 260*1.25, 12.5, "sign"],
+			[lib.sign, stageWidth / 2, 12.5, "sign"],
 			[lib.wave, 0, 494.1, "wave"],
 			[lib.progbar, 356, 534, "progbar"],
 			[lib.duck, stageWidth, 164, "duck"],
@@ -2533,7 +2543,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 				var myText = new createjs.Text(questionArray[qNum][0], '20px Arial', 'black');
 				stage.getChildByName("sign").addChild(myText);
 				myText.name = "signTxt";
-				myText.x = 250;
+				myText.x = 0;
 				myText.y = 30;
 				myText.lineWidth = 400;
 				myText.textAlign = "center";
@@ -2562,9 +2572,9 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 							//הפעלת סאונד אי הצלחה
 							playbadsound = createjs.Sound.play("loseSound");
 							missCorrect++;
-							console.log("תשובות נכונות שפוספסו עד כה: " + missCorrect);
+		/*					console.log("תשובות נכונות שפוספסו עד כה: " + missCorrect);*/
 							missedFirst.push(itemsArray[randQuestion][2]);
-							console.log(missedFirst);
+		/*					console.log(missedFirst);*/
 						} //במידה ולא הייתה פגיעה במסיח לא נכון
 						if (!isTrue && !isSelected) {
 							playbadsound = createjs.Sound.play("winSound");
@@ -2578,7 +2588,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 						//הוספת הליסנר מחדש אחרי סיום הסיבוב
 						stage.getChildByName("duck").addEventListener("click", duckShoot);
 					} else {
-						console.log("game over");
+		/*				console.log("game over");*/
 						gameover();
 					}
 				}
@@ -2640,8 +2650,10 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 			gameTime = 0;
 			correctCounter = 0;
 			progress = 0;
-		
+			
+			//הוספת השאלה למסך
 			addQuestion(mychoice - 1);
+			
 		
 			//יצירת דיליי בעת הוספת הברווזים
 			setTimeout(function () {
@@ -2650,20 +2662,19 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 				randQuestion = Math.floor(Math.random() * itemsArray.length);
 				addItem(randQuestion);
 				stage.getChildByName("pauseBtn").addEventListener("click", pauseGame);
+				window.addEventListener("keydown", handlekeypress);
 			}, 3000);
-			
 		}
 		
 		//פוקנציית ספירת הזמן
 		function timeCount() {
 			gameTime++;
-			console.log("זמן המשחק " + gameTime);
+		/*	console.log("זמן המשחק " + gameTime);*/
 		}
 		
 		//פונקציית עצירת המשחק
 		function pauseGame() {
 			directionX = 0;
-			stage.getChildByName("pauseBtn").removeEventListener("click", pauseGame);
 			createStgObj(lib.pauseScrn, 0, -17.5, "pauseScrn");
 			createStgObj(lib.playBtn, 390, 320, "playBtn");
 			stage.getChildByName("playBtn").addEventListener("click", continueGame);
@@ -2686,7 +2697,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		function gameover() {
 			createjs.Ticker.paused = true; //עצירת הטיקר
 			isStarted = false; //סיום המשחק
-		
+			window.removeEventListener("keydown", handlekeypress);
 			clearInterval(timeInterval); //עצירת האינטרוול
 			stage.removeAllChildren();
 			endGame();
@@ -2725,8 +2736,8 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 			if (grade < 0) {
 				grade = 0;
 			}
-			console.log(missCorrect + "" + incorrect);
-			console.log(grade);
+		/*	console.log(missCorrect + "" + incorrect);
+			console.log(grade);*/
 		
 			var endHeader;
 		
@@ -2745,9 +2756,9 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 			var textArray = [
 				[categories[mychoice - 1], 325, 155, "correctHeader", 'bold 28px Arial'],
 				["לא " + categories[mychoice - 1], 325 + 333, 155, "wrongHeader", 'bold 28px Arial'],
-				[endHeader, stageWidth / 2.3, 50, "endHeader", 'bold 36px Arial'],
-				["ציון: " + grade, stageWidth / 1.85, 100, "grade", 'bold 28px Arial'],
-				["זמן: " + gameTimeTxt, stageWidth / 2.9, 100, "gametime", 'bold 28px Arial'],
+				[endHeader, stageWidth / 2, 50, "endHeader", 'bold 36px Arial'],
+				["ציון: " + grade, stageWidth / 2 + 100, 100, "grade", 'bold 28px Arial'],
+				["זמן: " + gameTimeTxt, stageWidth / 2 - 100, 100, "gametime", 'bold 28px Arial'],
 				["פריטים שלא הצלחת בניסיון ראשון מסומנים עם כוכבית אדומה מתחתיהם *", 700.7, 539.7, "redAsterix", "16px Arial"]
 			];
 		
@@ -2842,7 +2853,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 	this.Layer_1 = new lib.Scene_1_Layer_1();
 	this.Layer_1.name = "Layer_1";
 	this.Layer_1.parent = this;
-	this.Layer_1.setTransform(480,297.3,1,1,0,0,0,480,297.3);
+	this.Layer_1.setTransform(480,296.3,1,1,0,0,0,480,296.3);
 	this.Layer_1.depth = 0;
 	this.Layer_1.isAttachedToCamera = 0
 	this.Layer_1.isAttachedToMask = 0
@@ -2853,7 +2864,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 	this.timeline.addTween(cjs.Tween.get(this.Layer_1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(478,296,962,587.9);
+p.nominalBounds = new cjs.Rectangle(478,295,962,587.9);
 // library properties:
 lib.properties = {
 	id: '3F6F8206532823468102137BDDC0FDFA',
@@ -2863,10 +2874,10 @@ lib.properties = {
 	color: "#E9E5CA",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HIT_the_DUCK_atlas_.png?1549960845994", id:"HIT_the_DUCK_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549960846094", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1549960846094", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/combobox.js?1549960846094", id:"an.ComboBox"}
+		{src:"images/HIT_the_DUCK_atlas_.png?1549963104918", id:"HIT_the_DUCK_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549963105041", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1549963105041", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/combobox.js?1549963105041", id:"an.ComboBox"}
 	],
 	preloads: []
 };
