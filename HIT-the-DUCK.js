@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"HIT_the_DUCK_atlas_", frames: [[1600,0,1314,1164],[3468,1801,440,123],[2445,1643,400,233],[1241,1849,400,267],[1241,1567,400,280],[2903,1514,400,266],[3687,577,100,81],[2916,577,769,501],[3305,1514,226,160],[1843,1565,600,360],[1843,1166,600,397],[1241,1166,600,399],[2916,1080,650,432],[1643,1927,342,100],[2847,1801,619,123],[2445,1878,342,100],[3305,1676,666,123],[2789,1926,376,60],[2445,1166,456,475],[3533,1514,150,107],[2847,1643,39,91],[3801,0,268,836],[3687,838,268,836],[2916,0,883,575],[2789,1878,32,32],[0,0,1598,1164],[0,1166,1239,1164],[1987,1927,359,78]]}
+		{name:"HIT_the_DUCK_atlas_", frames: [[1600,0,1314,1164],[3468,1801,440,123],[2445,1643,400,233],[1241,1849,400,267],[1241,1567,400,280],[2903,1514,400,266],[3687,577,100,81],[2916,577,769,501],[3305,1514,226,160],[1843,1565,600,360],[1843,1166,600,397],[1241,1166,600,399],[2916,1080,650,432],[2445,1878,342,100],[2847,1801,619,123],[1643,1927,342,100],[3305,1676,666,123],[2789,1926,376,60],[2445,1166,456,475],[3533,1514,150,107],[2847,1643,39,91],[3801,0,268,836],[3687,838,268,836],[2916,0,883,575],[2789,1878,32,32],[0,0,1598,1164],[0,1166,1239,1164],[1987,1927,359,78]]}
 ];
 
 
@@ -2185,14 +2185,6 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		this.wave1 = this.Layer_1.wave1;
 		var self = this;
 		
-		
-		
-		
-		//שימו לב, מערך זה משמש רק להצגת הנושאים בתוך תיבת הטקסט
-		//את הערכים שמוצגים בקומבו עצמו, יש להגדיר בתוך הקומפוננטה - לחיצה כפולה עליה בלייבררי, המקרה שלנו:
-		//forcomb -> click on the combobox componenet -> component parameters
-		//var subjects = ["לא בחרת נושא", "חשבון", "היסטוריה", "אנגלית"];
-		//משתנה שיעזור לברר איזה ערך מסומן בכל פעם בקומבו בוקס. עם הפתיחה מופיע הערך הראשון ולכן הערך ההתחלתי הוא 0
 		var mychoice = 0;
 		
 		//מימדי הבמה
@@ -2314,7 +2306,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		createjs.Ticker.setFPS(60);
 		createjs.Ticker.paused = true;
 		
-		
+		//פונקציה הבודקת לחיצה על מקשים (עבור השהייה של המשחק עם רווח)
 		function handlekeypress(e){
 				if(e.keyCode == "32" && directionX == 1){
 					pauseGame();
@@ -2362,7 +2354,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 			[lib.cat1, true, "item4"],
 			["צב", false, "item5"],
 			["כלב", true, "item6"],
-			["סנאי", true, "item7"],
+			["סנאי דרום אפריקאי מצוי", true, "item7"],
 			["לטאה", false, "item8"],
 			["דולפין", true, "item9"],
 			["צלופח", false, "item10"],
@@ -2464,6 +2456,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 					stage.getChildByName("duck").gotoAndStop(1);
 					isSelected = true;
 					incorrect++;
+					missedFirst.push(itemsArray[randQuestion][2]);
 				}, 300);
 		
 			}
@@ -2797,7 +2790,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 					correctCol = pozArr[1];
 					
 				} else { //אם מדובר בפריט שגוי
-					var pozArr = createEndItem(itemsArray, wrongRow, wrongCol, poz1, poz2, false, false);
+					var pozArr = createEndItem(itemsArray, wrongRow, wrongCol, poz1, poz2, false, isAsterix);
 					wrongRow = pozArr[0];
 					wrongCol = pozArr[1];
 				}
@@ -2874,10 +2867,10 @@ lib.properties = {
 	color: "#E9E5CA",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HIT_the_DUCK_atlas_.png?1549963104918", id:"HIT_the_DUCK_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549963105041", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1549963105041", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/combobox.js?1549963105041", id:"an.ComboBox"}
+		{src:"images/HIT_the_DUCK_atlas_.png?1549965255420", id:"HIT_the_DUCK_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549965255553", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1549965255553", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/combobox.js?1549965255553", id:"an.ComboBox"}
 	],
 	preloads: []
 };
