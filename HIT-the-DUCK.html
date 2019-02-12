@@ -22,7 +22,7 @@
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="HIT-the-DUCK.js?1549957834656"></script>
+<script src="HIT-the-DUCK.js?1549960846109"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -177,7 +177,7 @@ function handleComplete(evt,comp) {
 			stage.tickOnUpdate = true;		
 		}
 	}
-	makeResponsive(true,'both',false,1);	
+	makeResponsive(true,'both',true,1);	
 	AdobeAn.compositionLoaded(lib.properties.id);
 	fnStartAnimation();
 }

@@ -2239,7 +2239,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		
 			//הוספת הקומבו לבמה
 			var forcombo = new lib.forcomb();
-			forcombo.x = stageWidth / 2 - 55;
+			forcombo.x = stageWidth / 2 - 148.65;
 			forcombo.y = 150;
 			forcombo.name = "forcombo";
 			stage.addChild(forcombo);
@@ -2316,7 +2316,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 		
 		//מערך לאובייקטים על הבמה
 		var objArray = [
-			[lib.sign, stageWidth / 2 - 260, 12.5, "sign"],
+			[lib.sign, stageWidth / 2 - 260*1.25, 12.5, "sign"],
 			[lib.wave, 0, 494.1, "wave"],
 			[lib.progbar, 356, 534, "progbar"],
 			[lib.duck, stageWidth, 164, "duck"],
@@ -2651,6 +2651,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 				addItem(randQuestion);
 				stage.getChildByName("pauseBtn").addEventListener("click", pauseGame);
 			}, 3000);
+			
 		}
 		
 		//פוקנציית ספירת הזמן
@@ -2744,9 +2745,9 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 			var textArray = [
 				[categories[mychoice - 1], 325, 155, "correctHeader", 'bold 28px Arial'],
 				["לא " + categories[mychoice - 1], 325 + 333, 155, "wrongHeader", 'bold 28px Arial'],
-				[endHeader, stageWidth / 2, 50, "endHeader", 'bold 36px Arial'],
-				["ציון: " + grade, stageWidth / 2 + 100, 100, "grade", 'bold 28px Arial'],
-				["זמן: " + gameTimeTxt, stageWidth / 2 - 100, 100, "gametime", 'bold 28px Arial'],
+				[endHeader, stageWidth / 2.3, 50, "endHeader", 'bold 36px Arial'],
+				["ציון: " + grade, stageWidth / 1.85, 100, "grade", 'bold 28px Arial'],
+				["זמן: " + gameTimeTxt, stageWidth / 2.9, 100, "gametime", 'bold 28px Arial'],
 				["פריטים שלא הצלחת בניסיון ראשון מסומנים עם כוכבית אדומה מתחתיהם *", 700.7, 539.7, "redAsterix", "16px Arial"]
 			];
 		
@@ -2755,7 +2756,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.9,320,333.3);
 				stage.addChild(newText);
 				newText.x = textArray[i][1];
 				newText.y = textArray[i][2];
-				newText.lineWidth = 250;
+				newText.lineWidth = 500;
 				newText.textAlign = "center";
 				if (textArray[i][3] == "redAsterix") {
 					newText.lineWidth = 500;
@@ -2862,10 +2863,10 @@ lib.properties = {
 	color: "#E9E5CA",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/HIT_the_DUCK_atlas_.png?1549957834546", id:"HIT_the_DUCK_atlas_"},
-		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549957834640", id:"lib/jquery-2.2.4.min.js"},
-		{src:"components/sdk/anwidget.js?1549957834640", id:"sdk/anwidget.js"},
-		{src:"components/ui/src/combobox.js?1549957834640", id:"an.ComboBox"}
+		{src:"images/HIT_the_DUCK_atlas_.png?1549960845994", id:"HIT_the_DUCK_atlas_"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1549960846094", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1549960846094", id:"sdk/anwidget.js"},
+		{src:"components/ui/src/combobox.js?1549960846094", id:"an.ComboBox"}
 	],
 	preloads: []
 };
