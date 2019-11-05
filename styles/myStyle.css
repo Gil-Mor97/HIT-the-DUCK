@@ -1,4 +1,303 @@
-﻿body {
+﻿html {
+    height: 100%;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    min-height: 100%;
+}
+
+h1 {
+    text-align: right;
+    margin: 2% 3%;
+}
+
+.notContainer {
+    margin-top: 2%;
+    padding-bottom: 50px;
+    height: 100vh;
+}
+
+
+.countTooltip {
+    text-align: left;
+    float: left;
+    display: block;
+}
+
+#itemIMG {
+    width: 120px;
+    height: 97px;
+    margin: 113px 131px 13px 9px;
+    float: right;
+    border: 0;
+}
+
+#instructions {
+    width: 100%;
+    text-align: right;
+    margin-left: 165px;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 20px;
+}
+
+
+#updating input {
+    margin-top: 16px;
+    margin-right: -32px;
+    margin-left: 32px;
+}
+
+#infospace {
+    margin-bottom: 2%;
+}
+
+    #infospace div {
+        display: inline;
+        margin: 0 3%;
+        text-align: right;
+    }
+
+#ansRBL {
+    text-align: center;
+    /* margin-top: -55px; */
+    float: right;
+}
+
+    #ansRBL td {
+        text-align: center;
+        padding-left: 46px;
+    }
+
+    #ansRBL label {
+        display: table;
+        width: 170px;
+        position: relative;
+    }
+
+.btn, container {
+    margin: 0 auto;
+}
+
+#ducky {
+    background-image: url(../images/ducky-edit.png);
+    background-size: 100%;
+    width: 381.29px;
+    height: 269px;
+    float: right;
+    background-repeat: no-repeat;
+}
+
+#myEdit {
+    width: 81%;
+}
+
+#itemTB {
+    margin-top: 41%;
+    margin-left: 43px;
+    width: 147px;
+    height: 90px;
+    text-align: center;
+    border: 0;
+}
+
+#LabelCounter3, itemUpdateButton {
+    margin-left: 15%;
+}
+
+#buttons {
+    /*width: 331.6px;*/
+    width: 381.29px;
+    margin: 0 auto;
+    /* margin-top: 170px; */
+}
+
+#itemUpdateButton, #itemCancelButton {
+    display: inline;
+    margin-top: 2%;
+    width: 47%;
+    /* margin: 1% 5% 0 5%; */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#ItemAddButtonIMG, #ItemAddButtonTXT {
+    display: block;
+    margin-top: 2%;
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+
+
+.checks {
+    margin: 0 auto;
+    text-align: center;
+    /* margin-bottom: 1em; */
+}
+
+    .checks div {
+        padding: 1%;
+        display: block;
+        text-align: right;
+    }
+
+    .checks span {
+        text-align: right;
+    }
+
+    .checks .fas, .checks .fa {
+        padding: 0 1%;
+    }
+
+#totalAnswers {
+    text-align: center;
+    width: 665px;
+    font-weight: 500;
+    margin-right: 41%;
+    margin-left: 41%;
+}
+
+.datalistItem {
+    margin: 0 auto;
+    height: 100px;
+    width: 100px;
+    margin: 3px 0px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    background-color: #dae3f3ff;
+}
+
+    .datalistItem img {
+        margin: 5px;
+    }
+
+#DataListCorrect, #DataListIncorrect {
+    /* margin: 0 25px; */
+    width: 332.5px;
+    text-align: center;
+}
+
+.tHeaders {
+    display: block;
+}
+
+/*הגדרות לחלון האפור*/
+#grayWindows {
+    background-color: rgba(128, 128, 128,0.5);
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+/*הגדרות לחלון הפופ-אפ*/
+
+.PopUpBackground {
+    width: 100%;
+    height: 110vh;
+    /* margin-right: -59px; */
+    top: 0px;
+    background-color: #6262624a;
+    position: absolute;
+    margin: auto;
+}
+
+.PopUp {
+    position: fixed;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    Left: 50%;
+    Top: 50%;
+    width: 30%;
+    border: 0.5px solid #000000;
+    z-index: 9;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 1%;
+}
+
+    .PopUp #Label3 {
+        display: block;
+        font-weight: 700;
+        text-align: center;
+        left: 50%;
+        Top: 50%;
+        padding: 1%;
+        z-index: 9;
+        margin: 0 auto;
+    }
+
+/*הגדרות לכפתור היציאה*/
+.Exit {
+    display: inline-block;
+    width: 35%;
+    height: 30px;
+    display: inline;
+    text-align: center;
+    left: 50%;
+    Top: 50%;
+    border: 3px solid #f1f1f133;
+    z-index: 9;
+    margin: 2%;
+    cursor: pointer;
+}
+
+    .Exit:last-of-type {
+        background-color: red;
+        cursor: pointer;
+    }
+
+
+    .Exit:first-of-type {
+        cursor: pointer;
+        background-color: greenyellow;
+    }
+
+    .Exit:hover {
+        background-color: #ccc;
+    }
+
+/*העלמת פקדי העלאת תמונה*/
+#FileUpload1, #FileUploadWrong {
+    visibility: hidden;
+    display: none;
+    width: 1px;
+}
+
+/*קביעת גודל לתמונות*/
+#ImageforUpload1, #ImageforUploadWrong {
+    width: 150px;
+    height: 150px;
+}
+
+#ItemAddButtonIMG, #ItemAddButtonTXT {
+    display: none;
+}
+
+#uploading {
+    text-align: center;
+    width: 381.29px;
+}
+
+    #uploading input {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+
+/*=======================================================*/
+
+body {
     /*background-color: #C1EDFF;*/
     /*background-color: white;*/
     background-color: #e9e5ca4f;
@@ -14,13 +313,7 @@ iframe {
     width: 100%;
 }
 
-a img {
-    text-decoration: none
-}
 
-a {
-    text-decoration: none
-}
 
 #gameArea {
     overflow: hidden;
@@ -34,75 +327,58 @@ a {
     display: none;
 }
 
-header {
-    background-color: rgb(221,242,247);
-    width: 100%;
-    height: 50px;
-    position: relative;
-    direction: rtl;
-    display: block;
-    direction: rtl;
-    z-index: 3;
+.topnav-right {
+    float: right;
 }
 
-    /*כותרת משחק*/
-    header > a > p {
-        font-family: 'Assistant', sans-serif;
-        font-size: 12pt;
-        font-weight: 600;
-        position: relative;
-        top: -10px;
-        color: black;
-        display: inline-block;
-        direction: rtl;
-    }
+.topnav-righ p {
+    display: inline;
+}
+
+.myNavigation {
+    background-color: rgb(221, 242, 247);
+    overflow: hidden;
+}
 
 /*לוגו*/
 #logo {
-    width: 35px;
-    height: 35px;
-    padding: 5px 15px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
     direction: rtl;
+    margin-top: -5px;
 }
 
-nav {
-    margin-top: -70px;
-    margin-left: 10px;
-    direction: rtl;
+.myNavigation a {
+    float: left;
+    /* color: #f2f2f2; */
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+    font-size: 1em;
 }
 
-    nav ul {
-        list-style: none;
-        direction: rtl;
+
+
+    .myNavigation a:hover {
+        background-color: #ddd;
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+        font-family: 'Assistant', sans-serif;
+        text-decoration: none;
     }
 
-        nav ul li {
-            display: inline-block;
-            float: left;
-            direction: rtl;
-        }
+    .myNavigation a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
 
-            nav ul li a {
-                display: block;
-                color: rgb(30, 104, 177);
-                text-align: center;
-                padding: 3px 10px;
-                font-weight: 400;
-                font-size: 12pt;
-                font-family: 'Assistant', sans-serif;
-                direction: rtl;
-                text-decoration: none;
-            }
+    .myNavigation a img {
+        text-decoration: none
+    }
 
-                nav ul li a:hover {
-                    font-weight: 600;
-                    cursor: pointer;
-                    font-family: 'Assistant', sans-serif;
-                    direction: rtl;
-                    text-decoration: none;
-                }
-
-.popUp {
+.forNav .popUp {
     background-color: white;
     width: 400px;
     position: fixed;
@@ -121,7 +397,7 @@ nav {
     border: 1px solid black;
 }
 
-.bounceInDown {
+.forNav .bounceInDown {
     -webkit-animation-name: bounceInDown;
     animation-name: bounceInDown;
     -webkit-animation-duration: 1s;
@@ -130,70 +406,6 @@ nav {
     animation-fill-mode: both;
 }
 
-@-webkit-keyframes bounceInDown {
-    0%, 60%, 75%, 90%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-
-    100% {
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes bounceInDown {
-    0%, 60%, 75%, 90%, 100% {
-        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    }
-
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-
-    100% {
-        -webkit-transform: none;
-        transform: none;
-    }
+.closeAbout, .closeHowToPlay {
+    float: left;
 }

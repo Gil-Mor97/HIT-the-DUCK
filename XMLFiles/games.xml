@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HIT-the-Duck>
+  <idCounter>7</idCounter>
+  <game id="3" name="פירות" isPublished="false" gamecode="1003">
+    <idCounter>1</idCounter>
+    <question>
+    </question>
+  </game>
+  <game id="2" name="ערי בירה" isPublished="True" gamecode="1002">
+    <idCounter>19</idCounter>
+    <question>זהה את כל ערי הבירה</question>
+    <answer id="2" qType="txt" isCorrect="true">ירושלים</answer>
+    <answer id="3" qType="txt" isCorrect="true">ברלין</answer>
+    <answer id="4" qType="txt" isCorrect="true">וושינגטון</answer>
+    <answer id="5" qType="txt" isCorrect="true">קהיר</answer>
+    <answer id="6" qType="txt" isCorrect="true">טוקיו</answer>
+    <answer id="7" qType="txt" isCorrect="true">רומא</answer>
+    <answer id="8" qType="txt" isCorrect="true">	דבלין</answer>
+    <answer id="9" qType="txt" isCorrect="true">קופנהגן</answer>
+    <answer id="10" qType="txt" isCorrect="true">לונדון</answer>
+    <answer id="11" qType="txt" isCorrect="false">מאלמו</answer>
+    <answer id="12" qType="txt" isCorrect="false">תל אביב</answer>
+    <answer id="13" qType="txt" isCorrect="false">סאן פרנסיסקו</answer>
+    <answer id="14" qType="txt" isCorrect="false">ניו יורק</answer>
+    <answer id="15" qType="txt" isCorrect="false">אשדוד</answer>
+    <answer id="16" qType="txt" isCorrect="false">חיפה</answer>
+    <answer id="17" qType="txt" isCorrect="false">לוס אנג'לס</answer>
+    <answer id="18" qType="txt" isCorrect="false">ציריך</answer>
+    <answer id="19" qType="txt" isCorrect="false">סידני</answer>
+  </game>
+  <game id="1" gamecode="1001" name="מצא את היונקים" isPublished="True">
+    <idCounter>24</idCounter>
+    <question>זהה את כל בעלי החיים ממשפחת היונקים</question>
+    <answer id="2" qType="img" isCorrect="true">01_11_19_12_17_36.jpg</answer>
+    <answer id="3" qType="txt" isCorrect="true">פרה</answer>
+    <answer id="4" qType="txt" isCorrect="true">כלב</answer>
+    <answer id="5" qType="txt" isCorrect="false">תנין</answer>
+    <answer id="6" qType="txt" isCorrect="false">שקנאי</answer>
+    <answer id="7" qType="img" isCorrect="true">01_11_19_12_22_56.jpg</answer>
+    <answer id="8" qType="img" isCorrect="false">01_11_19_12_24_06.jpg</answer>
+    <answer id="9" qType="txt" isCorrect="false">ינשוף</answer>
+    <answer id="10" qType="img" isCorrect="false">01_11_19_12_24_41.jpg</answer>
+    <answer id="11" qType="img" isCorrect="false">01_11_19_12_26_23.jpg</answer>
+    <answer id="12" qType="txt" isCorrect="false">פרפר</answer>
+    <answer id="15" qType="img" isCorrect="true">01_11_19_12_27_06.jpg</answer>
+    <answer id="16" qType="txt" isCorrect="true">דולפין</answer>
+    <answer id="17" qType="txt" isCorrect="true">חתול</answer>
+    <answer id="18" qType="img" isCorrect="true">01_11_19_12_28_13.jpg</answer>
+    <answer id="19" qType="txt" isCorrect="true">לוויתן</answer>
+    <answer id="20" qType="img" isCorrect="false">01_11_19_12_28_35.jpg</answer>
+    <answer id="21" qType="txt" isCorrect="false">מקק</answer>
+    <answer id="22" qType="txt" isCorrect="false">זבוב</answer>
+    <answer id="23" qType="txt" isCorrect="true">כלב ים</answer>
+  </game>
+</HIT-the-Duck>
